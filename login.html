@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zenith</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="1.html">&larr; Back to Home</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <div class="bg-shape" style="width: 500px; height: 500px;"></div>
+
+            <div class="login-wrapper">
+                
+                <div id="loginBox">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Login</button>
+                    </form>
+                    
+                    <p class="toggle-text">
+                        Don't have an account? 
+                        <a href="#" onclick="openSignup(); return false;">Sign Up</a>
+                    </p>
+                </div>
+
+                <div id="signupBox" style="display: none;">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Create password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Sign Up</button>
+                    </form>
+                    
+                    <p class="toggle-text">
+                        Already have an account? 
+                        <a href="#" onclick="openLogin(); return false;">Login</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple function to hide Login and show Signup
+        function openSignup() {
+            document.getElementById('loginBox').style.display = 'none';
+            document.getElementById('signupBox').style.display = 'block';
+        }
+
+        // Simple function to hide Signup and show Login
+        function openLogin() {
+            document.getElementById('signupBox').style.display = 'none';
+            document.getElementById('loginBox').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
